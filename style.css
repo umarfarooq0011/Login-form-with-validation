@@ -1,0 +1,540 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c3e50;
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.left-panel,
+.right-panel {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Left Panel Styling */
+.left-panel {
+  background: url("https://w0.peakpx.com/wallpaper/639/615/HD-wallpaper-blue-mountain-moonlight-sunset-sky-moon-mountains-full-moon-sunrise-spectacular-firefox-persona-theme-blue-night.jpg")
+    no-repeat center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panel h2,
+.left-panel p,
+#text {
+  color: #fff;
+}
+
+.left-panel h2 {
+  padding-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.left-panel p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#text {
+  margin-bottom: 20px;
+  font-size: 2vw; /* Responsive font size */
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
+/* Right Panel Styling */
+.right-panel {
+  padding: 20px;
+}
+
+/* Styling for form controls */
+.form-control {
+  position: relative;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #ccc; /* Default underline */
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: none;
+  border-bottom-color: #3498db; /* Valid underline color */
+}
+
+/* Red underline for invalid input */
+.form-control input.invalid {
+  border-bottom-color: red;
+}
+
+.form-control input:focus.invalid {
+  border-bottom-color: red;
+}
+
+.form-control input::placeholder {
+  font-weight: bold; /* Bold placeholders */
+  color: #aaa;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #aaa;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #3498db; /* Match the underline color */
+  transform: translateY(-30px);
+}
+
+/* Autofill Styles for Inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  border-radius: 6px;
+}
+
+.input-wrapper:focus-within {
+  border-color: #3498db;
+}
+
+/* Checkbox Styling */
+.checkbox-wrapper-39 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.checkbox-wrapper-39 label {
+  margin-right: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper-39 input {
+  display: none;
+}
+
+.checkbox-wrapper-39 .checkbox {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #434343;
+  border-radius: 4px;
+  transition: all 0.375s;
+  margin-right: 10px;
+}
+
+.checkbox-wrapper-39 input:checked ~ .checkbox {
+  transform: rotate(45deg);
+  width: 14px;
+  margin-left: 12px;
+  border-color: #24c78e;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+
+/* Button Styling */
+.button-78 {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(92.83deg, #3765ee 0, #3e4b8b 100%);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  margin-top: 15px;
+  transition: all 100ms ease-out;
+}
+
+.button-78:hover {
+  background: linear-gradient(
+    92.83deg,
+    rgb(138, 135, 164) 0%,
+    rgb(14, 39, 179) 100%
+  );
+}
+
+/* Link Styling */
+.forget-password {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.forget-password:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For larger screens (desktops and larger tablets) */
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row;
+    width: 850px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 50%;
+  }
+}
+
+/* For medium-sized screens (e.g., tablets and large phones) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .left-panel h2 {
+    font-size: 1.6rem;
+  }
+
+  #text {
+    font-size: 16px;
+  }
+
+  .button-78 {
+    padding: 12px 20px;
+  }
+}
+
+/* For small screens (e.g., 5.5-inch devices or small phones) */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .left-panel h2 {
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+  }
+
+  .left-panel p {
+    font-size: 0.9rem;
+  }
+
+  #text {
+    font-size: 16px;
+  }
+
+  .button-78 {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .input-wrapper {
+    padding: 4px;
+  }
+
+  .form-control::placeholder {
+    font-size: 0.85rem;
+  }
+
+  .forget-password {
+    font-size: 0.85rem;
+  }
+}
+
+/* For extra small screens (e.g., older small phones or very small displays) */
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .left-panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .left-panel p {
+    font-size: 0.8rem;
+  }
+
+  #text {
+    font-size: 14px;
+  }
+
+  .button-78 {
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .input-wrapper {
+    padding: 3px;
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+  }
+
+  .forget-password {
+    font-size: 0.75rem;
+  }
+}
+
+/* Validation styling for valid and invalid inputs */
+.valid i {
+  color: green;
+}
+
+.invalid i {
+  color: red;
+}
+
+.log {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: 500;
+}
+
+/* Status Icon Styling */
+.status-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.status-icon.valid {
+  color: green;
+}
+
+.status-icon.invalid {
+  color: red;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+
+/* From Uiverse.io by Praashoo7 */ 
+.main {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.github {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+}
+
+.card4 {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.discord {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03A9F4;
+}
+
+.card2:hover .twitter {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .github {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .discord {
+  fill: white;
+}
